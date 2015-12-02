@@ -1,0 +1,1018 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head><base href="..">
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+<title>MediaWiki:Common.css - WikiIslam</title>
+<meta name="generator" content="MediaWiki 1.25.2">
+
+
+
+
+<link rel="copyright" href="http://creativecommons.org/licenses/by-nc/3.0/">
+
+
+<meta name="ResourceLoaderDynamicStyles" content="">
+
+
+
+
+
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins/Vector/csshover.min.htc")}</style><![endif]-->
+<link rel="stylesheet" href="style.css"><link rel="shortcut icon" href="favicon.ico"><link rel="stylesheet" href="style2.css"><script src="wikiislam.js"></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-8 ns-subject page-MediaWiki_Common_css skin-vector action-view">
+
+
+
+
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">MediaWiki:Common.css</h1>
+						<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From WikiIslam, the online resource on Islam</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="wiki/MediaWiki-Common.css.html#mw-head">navigation</a>, 					<a href="wiki/MediaWiki-Common.css.html#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="mw-clearyourcache" lang="en" dir="ltr" class="mw-content-ltr">
+<p><strong>Note:</strong> After saving, you may have to bypass your browser's cache to see the changes.
+</p>
+<ul><li> <strong>Firefox / Safari:</strong> Hold <em>Shift</em> while clicking <em>Reload</em>, or press either <em>Ctrl-F5</em> or <em>Ctrl-R</em> (<em>⌘-R</em> on a Mac)</li>
+<li> <strong>Google Chrome:</strong> Press <em>Ctrl-Shift-R</em> (<em>⌘-Shift-R</em> on a Mac)</li>
+<li> <strong>Internet Explorer:</strong> Hold <em>Ctrl</em> while clicking <em>Refresh</em>, or press <em>Ctrl-F5</em></li>
+<li> <strong>Opera:</strong> Clear the cache in <em>Tools → Preferences</em></li></ul>
+</div>
+<pre class="mw-code mw-css" dir="ltr">
+/* 
+
+'''Common [[Cascading Style Sheets|CSS]] for all skins''' 
+
+Always check with the [http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fen.wikipedia.org%2Fw%2Findex.php%3Ftitle%3DMediaWiki%3ACommon.css%26action%3Draw%26ctype%3Dtext%2Fcss&amp;usermedium=all W3C CSS Validation Service] after any changes.
+
+Thank you. 
+
+(In [[Mozilla]] and [[Opera (web browser)|Opera]], you can test style changes dynamically with the [http://www.squarefree.com/bookmarklets/webdevel.html test styles] bookmarklet from squarefree.com.  It pops up a window for adding style rules, and updates the page as you type.)
+
+See also the [[Wikipedia:Catalogue of CSS classes|catalogue of CSS classes]].
+{{interwiki-all}}
+&lt;pre&gt;&lt;nowiki&gt;*/
+
+
+references-small { font-size: 90%;}
+
+/* Make the list of references smaller */
+ol.references,
+div.reflist,
+div.refbegin {
+    font-size: 90%;            /* Default font-size */
+    margin-bottom: 0.5em;
+}
+div.refbegin-100 {
+    font-size: 100%;           /* Option for normal fontsize in {{refbegin}} */
+}
+div.reflist ol.references {
+    font-size: 100%;           /* Reset font-size when nested in div.reflist */
+    list-style-type: inherit;  /* Enable custom list style types */
+}
+ 
+/* Highlight clicked reference in blue to help navigation */
+ol.references li:target,
+sup.reference:target,
+span.citation:target {
+    background-color: #DEF;
+}
+ 
+/* Ensure refs in table headers and the like aren't bold or italic */
+sup.reference {
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+/* Allow hidden ref errors to be shown by user CSS */
+span.brokenref {
+    display: none;
+}
+ 
+/* Styling for citations (CSS3). Breaks long urls, etc., rather than overflowing box */
+.citation {
+    word-wrap: break-word;
+}
+
+
+/* Content in columns with CSS instead of tables [[Template:Columns]] */
+div.columns-2 div.column {
+    /* @noflip */
+    float: left;
+    width: 50%;
+    min-width: 300px;
+}
+div.columns-3 div.column {
+    /* @noflip */
+    float: left;
+    width: 33.3%;
+    min-width: 200px;
+}
+div.columns-4 div.column {
+    /* @noflip */
+    float: left;
+    width: 25%;
+    min-width: 150px;
+}
+div.columns-5 div.column {
+    /* @noflip */
+    float: left;
+    width: 20%;
+    min-width: 120px;
+}
+
+
+
+/* VALIDATOR NOTICE: the following is correct, but the W3C validator doesn't accept it */
+/* -moz-* is a vendor-specific extension (CSS 2.1 4.1.2.1) */
+/* column-count is from the CSS3 module &quot;CSS Multi-column Layout&quot; */
+/* Please ignore any validator errors caused by these two lines */
+.references-2column {
+  font-size: 90%;
+  -moz-column-count:2;
+  column-count:2;
+}
+
+.same-bg { background: none }
+
+/* wikitable/prettytable class for skinning normal tables */
+
+table.wikitable,
+table.prettytable {
+  margin: 0em 0em 0em 0;
+  background: #f9f9f9;
+  border: 1px #aaaaaa solid;
+  border-collapse: collapse;
+}
+
+table.wikitable th, table.wikitable td,
+table.prettytable th, table.prettytable td {
+  border: 1px #aaaaaa solid;
+  padding: 0.2em;
+}
+
+table.wikitable th,
+table.prettytable th {
+  background: #f2f2f2;
+  text-align: center;
+}
+
+table.wikitable caption,
+table.prettytable caption {
+  margin-left: inherit;
+  margin-right: inherit;
+  font-weight: bold;
+}
+
+/* Style for &quot;notices&quot; */
+.notice {
+    margin: 1em;
+    padding: 0.2em;
+}
+
+#disambig {
+    border-top: 1px solid #cccccc; 
+    border-bottom: 1px solid #cccccc;
+}
+
+#spoiler {
+    border-top: 2px solid #ddd;
+    border-bottom:2px solid #ddd;
+}
+
+/* Standard talk template style */
+
+.Talk-Notice  {
+    border: 1px solid #C0C090;
+    background-color: #F8EABA;
+    margin-bottom: 3px;
+    width: 85%;
+    border-spacing: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Talk-Notice:after {
+  content: &quot;The CSS for this template should be changed. See [[Wikipedia:Template Standardisation]].&quot;;
+}
+
+/* Make template background appear correctly on all browsers */
+.Talk-Notice td {
+    background: inherit;
+}
+
+/* Metadata */
+table.metadata {
+    border: 1px solid #aaaaaa;
+    display: none;
+    speak: none;
+}
+.metadata-label {
+    color: #aaaaaa;
+}
+
+/* Makes redirects appear in italics on [[Special:Allpages]] */
+.allpagesredirect {
+    font-style: italic;
+}
+
+/* Choose whether to have AD/BC dates or CE/BCE dates*/
+
+/* First, the default : display both : See templates ADCE and BCEBC for how these are used*/
+.Use_Default_Date_Convention { display: inline; }
+.Use_AD_and_BC { display: none; }
+.Use_BCE_and_CE { display: none; }
+
+/* If you want to display AD and BC add the following to User:You/monobook.css page */
+/*
+.Use_Default_Date_Convention { display: none; }
+.Use_AD_and_BC { display:inline; }
+.Use_BCE_and_CE { display:none; }
+*/
+
+/*If you want to display CE and BCE add the following to User:You/monobook.css page */
+/*
+.Use_Default_Date_Convention { display: none; }
+.Use_AD_and_BC { display:none; }
+.Use_BCE_and_CE {display:inline; }
+*/
+
+/* Class for links with loudspeaker icon next to them */
+
+.audiolink a{
+    background: url(&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png&quot;) center left no-repeat !important;
+    padding-left: 16px !important;
+    padding-right: 0 !important;
+}
+
+/* Icons for medialist templates [[Template:Listen]], [[Template:Multi-listen_start]], [[Template:Video]], [[Template:Multi-video_start]] */
+
+div.listenlist {
+    background: url(&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Gnome-speakernotes.png/30px-Gnome-speakernotes.png&quot;);
+    padding-left: 40px;
+}
+
+div.videolist, div.multivideolist {
+    background: url(&quot;http://upload.wikimedia.org/wikipedia/en/thumb/2/20/Tango-video-x-generic.png/40px-Tango-video-x-generic.png&quot;);
+    padding-left: 50px;
+}
+
+/* Style rules for media list templates */
+
+div.medialist {
+    min-height: 50px;
+    margin: 1em;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+div.medialist ul {
+    list-style-type: none; 
+    list-style-image: none;
+    margin: 0;
+}
+
+div.medialist ul li {
+    padding-bottom: 0.5em;
+}
+
+div.medialist ul li li {
+    font-size: 91%;
+    padding-bottom: 0;
+}
+
+/* Change the external link icon to an Adobe icon for all PDF files */
+/* (in browsers that support these CSS selectors, like Mozilla and Opera) */
+#bodyContent a[href$=&quot;.pdf&quot;].external, 
+#bodyContent a[href*=&quot;.pdf?&quot;].external, 
+#bodyContent a[href*=&quot;.pdf#&quot;].external,
+#bodyContent a[href$=&quot;.PDF&quot;].external, 
+#bodyContent a[href*=&quot;.PDF?&quot;].external, 
+#bodyContent a[href*=&quot;.PDF#&quot;].external {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif) center right no-repeat;
+    padding-right: 16px;
+}
+
+/* Change the external link icon to an Adobe icon anywhere the PDFlink class */
+/* is used (notably Template:PDFlink). This works in IE, unlike the above. */
+span.PDFlink a {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif) center right no-repeat !important;
+    padding-right: 17px !important;
+}
+
+/* Content in columns with CSS instead of tables [[Template:Columns]] */
+div.columns-2 div.column {
+    float: left;
+    width: 50%;
+    min-width: 300px;
+}
+
+div.columns-3 div.column {
+    float: left;
+    width: 33.3%;
+    min-width: 200px;
+}
+
+div.columns-4 div.column {
+    float: left;
+    width: 25%;
+    min-width: 150px;
+}
+
+div.columns-5 div.column {
+    float: left;
+    width: 20%;
+    min-width: 120px;
+}
+
+/*Add formatting to make sure that &quot;external references&quot; from [[Template:Ref]] do
+  not get URL expansion, not even when printed. The mechanism up to MediaWiki 1.4 was
+  that the HTML code contained a SPAN following the anchor A; this SPAN had the class
+  &quot;urlexpansion&quot;, which was not displayed on screen, but was shown when the medium was
+  &quot;print&quot;. The rules below ensure (a) that there is no extra padding to the right of
+  the anchor (displayed as &quot;[&lt;number&gt;]&quot;), (b) that there is no &quot;external link arrow&quot; for
+  the link, and (c) that this SPAN of class &quot;urlexpansion&quot; is never shown.
+  ~~~~
+*/
+
+.plainlinksneverexpand {
+  background: none ! important;
+  padding: 0 ! important;
+}
+
+.plainlinksneverexpand .urlexpansion {
+  display: none ! important;
+}
+
+/* Make sure that ext links displayed within &quot;plainlinksneverexpand&quot; don't get
+   the arrow...
+*/
+.plainlinksneverexpand a {
+   background: none !important;
+   padding: 0 !important;
+}
+
+/* With MediaWiki 1.5, the mechanism has changed: instead of a SPAN of class &quot;urlexpansion&quot;
+   following the anchor A, the anchor itself now has class &quot;external autonumber&quot; and the
+   expansion is inserted when printing (see the common printing style sheet at
+   http://en.wikipedia.org/skins-1.5/common/commonPrint.css) using the &quot;:after&quot; pseudo-
+   element of CSS. We have to switch this off for links due to Template:Ref!
+   ~~~~
+*/
+.plainlinksneverexpand a.external.text:after {
+  display: none !important;
+}
+.plainlinksneverexpand a.external.autonumber:after {
+  display: none !important;
+}
+
+/* Messagebox templates */
+
+.messagebox {
+   border: 1px solid #aaaaaa;
+   background-color: #f9f9f9;
+   width: 80%;
+   margin: 0 auto 1em auto;
+   padding: .2em;
+}
+.messagebox.merge {
+   border: 1px solid #c0b8cc;
+   background-color: #f0e5ff;
+   text-align: center;
+}
+.messagebox.cleanup {
+   border: 1px solid #9f9fff;
+   background-color: #efefff;
+   text-align: center;
+}
+.messagebox.standard-talk {
+   border: 1px solid #c0c090;
+   background-color: #f8eaba;
+}
+
+/* Infobox template style */
+
+.infobox {
+   border: 1px solid #aaaaaa;
+   background-color: #f9f9f9;
+   color: black;
+   margin-bottom: 0.5em;
+   margin-left: 1em;
+   padding: 0.2em;
+   float: right;
+   clear: right;
+}
+.infobox td,
+.infobox th {
+   vertical-align: top;
+}
+.infobox caption {
+   font-size: larger;
+   margin-left: inherit;
+}
+.infobox.bordered {
+   border-collapse: collapse;
+}
+.infobox.bordered td,
+.infobox.bordered th {
+   border: 1px solid #aaaaaa;
+}
+.infobox.bordered .borderless td,
+.infobox.bordered .borderless th {
+   border: 0;
+}
+
+.infobox.sisterproject {
+   width: 20em;
+   font-size: 90%;
+}
+
+/* styles for bordered infobox with merged rows */
+.infobox.bordered .mergedtoprow td,
+.infobox.bordered .mergedtoprow th {
+   border: 0;
+   border-top: 1px solid #aaaaaa;
+   border-right: 1px solid #aaaaaa;
+}
+
+.infobox.bordered .mergedrow td,
+.infobox.bordered .mergedrow th {
+   border: 0;
+   border-right: 1px solid #aaaaaa;
+}
+
+
+/* styles for geography infoboxes, e.g. countries, national subdivisions, cities, etc. */
+
+.infobox.geography {
+   border: 1px solid #ccd2d9;
+   text-align: left;
+   border-collapse: collapse;
+   line-height: 1.2em; 
+   font-size: 90%;
+}
+
+.infobox.geography  td,
+.infobox.geography  th {
+   border-top: solid 1px #ccd2d9;
+   padding: 0.4em 0.2em 0.4em 0.8em;
+}
+.infobox.geography .mergedtoprow td,
+.infobox.geography .mergedtoprow th {
+   border-top: solid 1px #ccd2d9;
+   padding: 0.4em 0.2em 0.2em 0.8em;
+}
+
+.infobox.geography .mergedrow td,
+.infobox.geography .mergedrow th {
+      border: 0;
+      padding: 0 0.2em 0.2em 0.8em;
+}
+
+.infobox.geography .mergedbottomrow td,
+.infobox.geography .mergedbottomrow th {
+   border-top: 0;
+   border-bottom: solid 1px #ccd2d9;
+   padding: 0 0.2em 0.4em 0.8em;
+}
+
+.infobox.geography .maptable td,
+.infobox.geography .maptable th {
+      border: 0;
+      padding: 0 0 0 0;
+}
+
+/* Put a checker background at the image description page only visible if the image has transparent background */
+
+#file img {background: url(&quot;http://upload.wikimedia.org/wikipedia/commons/5/5d/Checker-16x16.png&quot;) repeat;}
+
+/* Support for Template:IPA, Template:Unicode and Template:Polytonic. The inherit declaration resets the font for all browsers except MSIE6.  The empty comment must remain. Please copy any changes to [[Template:IPA fonts]] and [[Template:Unicode fonts]]. */
+.IPA {
+        font-family: Chrysanthi Unicode, Doulos SIL, Gentium, GentiumAlt, Code2000, TITUS Cyberbit Basic, DejaVu Sans, Bitstream Cyberbit, Arial Unicode MS, Lucida Sans Unicode, Hiragino Kaku Gothic Pro, Matrix Unicode;
+        font-family /**/:inherit;
+}
+.Unicode {
+        font-family: Code2000, TITUS Cyberbit Basic, Doulos SIL, Chrysanthi Unicode, Bitstream Cyberbit, Bitstream CyberBase, Thryomanes, Gentium, GentiumAlt, Visual Geez Unicode, Lucida Grande, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode;
+        font-family /**/:inherit;
+}
+.latinx {
+        font-family: Code2000, TITUS Cyberbit Basic, Microsoft Sans Serif;
+        font-family /**/:inherit;
+}
+.polytonic {
+        font-family: Athena, Gentium, Palatino Linotype, Arial Unicode MS, Lucida Sans Unicode, Lucida Grande, Code2000; 
+        font-family /**/:inherit;
+}
+.mufi {
+        font-family: Alphabetum, Cardo, LeedsUni, Junicode, TITUS Cyberbit Basic, ALPHA-Demo;
+}
+
+#wpSave {
+  font-weight: bold;
+}
+
+/* class hiddenStructure is deprecated. See [[Wikipedia:hiddenStructure]] */
+.hiddenStructure {
+   display: none;
+   speak: none;
+}
+
+/* Removes underlines from links */
+.nounderlines a { 
+  text-decoration: none;
+}
+
+/* Remove underline from IPA links */
+.IPA a:link, .IPA a:visited {
+  text-decoration: none;
+}
+
+/* Removes useless links from printout */
+@media print {
+    #privacy, #about, #disclaimer {display:none;}
+}
+
+/* For linked citation numbers and document IDs, where
+   the number need not be shown on a screen or a handheld,
+   but should be included in the printed version */
+@media screen, handheld {
+    .citation *.printonly {
+        display: none;
+    }
+}
+
+
+
+
+
+/* Standard Navigationsleisten, aka box hiding thingy from .de.*/
+
+div.Boxmerge,
+div.NavFrame {
+        margin: 0px;
+        padding: 2px;
+        border: 1px solid #aaaaaa;
+        text-align: center;
+        border-collapse: collapse;
+        font-size: 95%;
+}
+div.Boxmerge div.NavFrame {
+        border-style: none;
+        border-style: hidden;
+}
+div.NavFrame + div.NavFrame {
+        border-top-style: none;
+        border-top-style: hidden;
+}
+div.NavPic {
+        background-color: #ffffff;
+        margin: 0px;
+        padding: 2px;
+        float: left;
+}
+div.NavFrame div.NavHead {
+        height: 1.6em;
+        font-weight: bold;
+        font-size: 100%;
+        background-color: #efefef;
+        position:relative;
+}
+div.NavFrame p {
+        font-size: 100%;
+}
+div.NavFrame div.NavContent {
+        font-size: 100%;
+}
+div.NavFrame div.NavContent p {
+        font-size: 100%;
+}
+div.NavEnd {
+        margin: 0px;
+        padding: 0px;
+        line-height: 1px;
+        clear: both;
+}
+a.NavToggle {
+        position:absolute;
+        top:0px;
+        right:3px;
+        font-weight:normal;
+        font-size:smaller;
+}
+
+
+.small2, .small2 * {
+	font-size: 95%;
+}
+table.small2 {
+	font-size: 95%;
+}
+
+
+.fsmall, .fsmall * {
+	font-size: 50%;
+}
+table.fsmall {
+	font-size: 50%;
+}
+
+table.simpleborder1px {
+  margin: 0em 0em 0em 0;
+  border: 1px #aaaaaa solid;
+  border-collapse: collapse;
+}
+
+.GoldenHover a:hover {
+   color:#FFAE00;
+}
+
+
+/* This group of fonts is for use with the Koranic Bible section */
+
+.KB-Mainheading {
+font-size: 120%;
+}
+
+.KB-Hebrew {
+font-size: 110%;
+color:blue;
+}
+
+
+.KB-Hebrew-trans1 {
+font-size: 100%;
+color:blue;
+}
+
+.KB-Hebrew-trans2 {
+font-size: 100%;
+color:blue;
+font-weight:bold;
+}
+
+.KB-Heading1  {
+font-size: 100%;
+font-weight:bold;
+}
+
+.KB-Arabic {
+font-size: 140%;
+font-weight:bold;
+color:red 
+}
+
+.KB-Text1 {
+font-size: 100%;
+font-weight:normal;
+}
+
+.KB-Ref {
+font-size: 100%;
+font-weight:normal;
+color:gray;
+}
+
+.KB-Text2 {
+font-size: 100%;
+font-weight:bold;
+text-decoration: underline;
+}
+
+/* Start, Show/hide */
+.collapseButton {          /* 'show'/'hide' buttons created dynamically */
+    float: right;          /* by the CollapsibleTables javascript in    */
+    font-weight: normal;   /* [[MediaWiki:Common.js]]are styled here    */
+    text-align: right;     /* so they can be customised.                */
+    width: auto;
+}
+.navbox .collapseButton {  /* In navboxes, the show/hide button balances */
+    width: 6em;            /* the vde links from [[Template:Tnavbar]],   */
+}                          /* so they need to be the same width.         */
+
+/* End, Show/hide */
+
+/* From Wikisource: http://en.wikisource.org/wiki/MediaWiki:Common.css */
+    .authortemplate,
+    .headertemplate,
+    .footertemplate
+    {
+     width: 100%;
+     margin-bottom: 5px;
+    }
+
+table.headertemplate,
+table.footertemplate,
+div#divMediaWiki-Proofreadpage_header_template
+{
+ border: 1px solid #ADA;
+ background-color: #E4F2E4;
+}
+
+/* Forward and backward link */
+        .gen_header_backlink,
+        .gen_header_forelink
+        {
+         width: 20%;
+         font-size: 0.9em;
+         line-height: normal;
+        }
+ 
+        .gen_header_backlink
+        {
+         text-align: left;
+        }
+ 
+        .gen_header_forelink
+        {
+         text-align: right;
+        }
+ 
+    /* Title field */
+        .gen_header_title
+        {
+         width: 60%;
+         text-align:center;
+        }
+
+/* Quote boxes */
+.quotes {
+    background: none repeat scroll 0 0 #F5FDFE;
+    border: 1px solid #A8A8A8;
+    margin-bottom: 10px;
+    margin-left: 14px;
+    padding: 6px;
+    overflow: hidden;
+}
+
+/* Small text Refs at bottom right within quote boxes */
+.quotes_ref {
+    font-size: 85%;
+    text-align: right;
+}
+
+/* Box for Core articles */
+.core_box {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #AAAAAA;
+    clear: both;
+    float: right;
+    font-size: 85%;
+    margin: 15px;
+    padding: 0.3em;
+    width: 260px;
+}
+
+/* Site Tag line (top of each page under page title) */
+#siteSub {
+    display: inline;
+    font-size: 85%;
+    font-weight: normal;
+    font-style: normal;
+    text-align: right;
+}
+
+.simpleborder {
+    border: 1px #aaaaaa solid;
+    padding: 3px;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+/* Used for {{main||}} template to out-dent and italicize, from Wikipedia */
+.rellink, .dablink {
+    font-style: italic;
+    margin-bottom: 0.5em;
+    padding-left: 1.6em;
+}
+
+/* Highlight text with yellow background without making a border. Can be used within Quote boxes as well */
+.wiHighlight {
+  background: #fff8cc;
+  border-bottom: 1px solid #ffe222;
+  padding-left: .3em;
+  padding-right: .3em;
+  font-weight: normal;
+}
+
+/* Text direction for Right to left for languages like Arabic etc */
+.rtol { direction: rtl; }
+
+/*&lt;/nowiki&gt;&lt;/pre&gt;*/
+</pre>
+</div>									<div class="printfooter">
+						Retrieved from &quot;<a dir="ltr" href="w/index.php.html?title=MediaWiki:Common.css&oldid=110008">http://wikiislam.net/w/index.php?title=MediaWiki:Common.css&amp;oldid=110008</a>&quot;					</div>
+													<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class='visualClear'></div>
+							</div>
+		</div>
+		<div id='mw-navigation'>
+			<h2>Navigation menu</h2>
+
+			<div id='mw-head'>
+									
+									<div id='left-navigation'>
+										<div id='p-namespaces' role='navigation' class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id='p-namespaces-label'>Namespaces</h3>
+						<ul>
+															<li id='ca-nstab-mediawiki' class='selected'><span><a href='wiki/MediaWiki-Common.css.html' title='View the system message [c]' accesskey="c">Message</a></span></li>
+															
+													</ul>
+					</div>
+										<div id='p-variants' role='navigation' class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id='p-variants-label'><span>Variants</span><a href='wiki/MediaWiki-Common.css.html#'></a></h3>
+
+						<div class='menu'>
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id='right-navigation'>
+										<div id='p-views' role='navigation' class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id='p-views-label'>Views</h3>
+						<ul>
+															<li id='ca-view' class='selected'><span><a href='wiki/MediaWiki-Common.css.html'>Read</a></span></li>
+															<li id='ca-viewsource'><span><a href='w/index.php.html?title=MediaWiki:Common.css&action=edit' title='This page is protected.
+You can view its source [e]' accesskey="e">View source</a></span></li>
+															
+													</ul>
+					</div>
+										<div id='p-cactions' role='navigation' class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id='p-cactions-label'><span>More</span><a href='wiki/MediaWiki-Common.css.html#'></a></h3>
+
+						<div class='menu'>
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id='p-search' role='search'>
+						<h3>
+							<label for='searchInput'>Search</label>
+						</h3>
+
+						<form action='' id='searchform'>
+														<div id='simpleSearch'>
+															<input type='search' name='search' placeholder="Search" title="Search WikiIslam [f]" accesskey="f" id="searchInput"><input type='hidden' value='Special:Search' name="title"><input type='submit' name='fulltext' value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton">								</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id='mw-panel'>
+				<div id='p-logo' role='banner'><a class='mw-wiki-logo' href='wiki/Main_Page.html' title="Visit the main page"></a></div>
+						<div class='portal' role='navigation' id='p-Navigation' aria-labelledby='p-Navigation-label'>
+			<h3 id='p-Navigation-label'>Navigation</h3>
+
+			<div class='body'>
+									<ul>
+													<li id='n-Main-Page'><a href='wiki/Main_Page.html'>Main Page</a></li>
+													<li id='n-New-Articles'><a href='wiki/WikiIslam-New_Articles_List.html'>New Articles</a></li>
+													<li id='n-Site-Map'><a href='wiki/WikiIslam-Site_Map.html'>Site Map</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class='portal' role='navigation' id='p-Editing_.C2.A0' aria-labelledby='p-Editing_.C2.A0-label'>
+			<h3 id='p-Editing_.C2.A0-label'>Editing  </h3>
+
+			<div class='body'>
+									<ul>
+													<li id='n-Recent-Changes'><a href='wiki/Special-RecentChanges.html'>Recent Changes</a></li>
+													<li id='n-Discussions'><a href='wiki/WikiIslam-Discussions.html'>Discussions</a></li>
+													<li id='n-Become-an-Editor'><a href='wiki/WikiIslam-Join_the_Team.html'>Become an Editor</a></li>
+													<li id='n-New-Users'><a href='wiki/WikiIslam-Message_to_New_Users.html'>New Users</a></li>
+													<li id='n-Translations'><a href='wiki/WikiIslam-Translations.html'>Translations</a></li>
+													<li id='n-List-of-Tasks'><a href='wiki/WikiIslam-Tasks.html'>List of Tasks</a></li>
+													<li id='n-Incomplete-Pages'><a href='wiki/Category-Articles_needing_attention.html'>Incomplete Pages</a></li>
+													<li id='n-Help'><a href='wiki/Help-Contents.html'>Help</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class='portal' role='navigation' id='p-Core_articles' aria-labelledby='p-Core_articles-label'>
+			<h3 id='p-Core_articles-label'>Core articles</h3>
+
+			<div class='body'>
+									<ul>
+													<li id='n-Apostasy'><a href='wiki/Islam_and_Apostasy.html'>Apostasy</a></li>
+													<li id='n-Homosexuality'><a href='wiki/Islam_and_Homosexuality.html'>Homosexuality</a></li>
+													<li id='n-Miracles'><a href='wiki/Islam_and_Miracles.html'>Miracles</a></li>
+													<li id='n-Pedophilia'><a href='wiki/Islam_and_Pedophilia.html'>Pedophilia</a></li>
+													<li id='n-People-of-the-Book'><a href='wiki/Islam_and_the_People_of_the_Book.html'>People of the Book</a></li>
+													<li id='n-Propaganda'><a href='wiki/Islam_and_Propaganda.html'>Propaganda</a></li>
+													<li id='n-Science'><a href='wiki/Islam_and_Science.html'>Science</a></li>
+													<li id='n-Scripture'><a href='wiki/Islam_and_Scripture.html'>Scripture</a></li>
+													<li id='n-Violence'><a href='wiki/Islam_and_Violence.html'>Violence</a></li>
+													<li id='n-Women'><a href='wiki/Islam_and_Women.html'>Women</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class='portal' role='navigation' id='p-About' aria-labelledby='p-About-label'>
+			<h3 id='p-About-label'>About</h3>
+
+			<div class='body'>
+									<ul>
+													<li id='n-About-Us'><a href='wiki/WikiIslam.html'>About Us</a></li>
+													<li id='n-Meet-the-Editors'><a href='wiki/WikiIslam-Meet_the_Editors.html'>Meet the Editors</a></li>
+													<li id='n-What-People-Say'><a href='wiki/What_People_Say_About_WikiIslam.html'>What People Say</a></li>
+													<li id='n-FAQ'><a href='wiki/WikiIslam-Frequently_Asked_Questions.html'>FAQ</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class='portal' role='navigation' id='p-Policies' aria-labelledby='p-Policies-label'>
+			<h3 id='p-Policies-label'>Policies</h3>
+
+			<div class='body'>
+									<ul>
+													<li id='n-Core-Principles'><a href='wiki/WikiIslam-Core_Principles.html'>Core Principles</a></li>
+													<li id='n-Policies-Overview'><a href='wiki/WikiIslam-Policies_and_Guidelines.html'>Policies Overview</a></li>
+													<li id='n-Citing-Sources'><a href='wiki/WikiIslam-Citing_Sources.html'>Citing Sources</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class='portal' role='navigation' id='p-Translations' aria-labelledby='p-Translations-label'>
+			<h3 id='p-Translations-label'>Translations</h3>
+
+			<div class='body'>
+									<ul>
+													<li id='n-Az.C9.99rbaycanca'><a href='wiki/Azərbaycanca_Yazılar_-_Articles_in_Azerbaijani.html'>Azərbaycanca</a></li>
+													<li id='n-.D0.91.D1.8A.D0.BB.D0.B3.D0.B0.D1.80.D1.81.D0.BA.D0.B8'><a href='wiki/Начална_страница.html'>Български</a></li>
+													<li id='n-.C4.8Cesky'><a href='wiki/Clanky_v_ceskem_jazyce_-_Articles_in_Czech.html'>Česky</a></li>
+													<li id='n-Deutsch'><a href='wiki/Artikel_auf_Deutsch_-_Articles_in_German.html'>Deutsch</a></li>
+													<li id='n-Espa.C3.B1ol'><a href='wiki/Artículos_en_español_-_Articles_in_Spanish.html'>Español</a></li>
+													<li id='n-Fran.C3.A7ais'><a href='wiki/Les_articles_en_francais_-_Articles_in_French.html'>Français</a></li>
+													<li id='n-Italiano'><a href='wiki/Articoli_in_Italiano_-_Articles_in_Italian.html'>Italiano</a></li>
+													<li id='n-O.27zbekcha'><a href='wiki/Ozbekcha_maqolalar_-_Articles_in_Uzbek.html'>O'zbekcha</a></li>
+													<li id='n-.D0.A0.D1.83.D1.81.D1.81.D0.BA.D0.B8.D0.B9'><a href='wiki/Заглавная_страница.html'>Русский</a></li>
+													<li id='n-T.C3.BCrk.C3.A7e'><a href='wiki/Turkce_Makaleler_-_Articles_in_Turkish.html'>Türkçe</a></li>
+													<li id='n-Miscellaneous'><a href='wiki/Category-Other_Languages.html'>Miscellaneous</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class='portal' role='navigation' id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class='body'>
+									<ul>
+													
+													
+													<li id='t-specialpages'><a href='wiki/Special-SpecialPages.html' title='A list of all special pages [q]' accesskey='q'>Special pages</a></li>
+													
+													
+													
+											</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id='footer' role='contentinfo'>
+							<ul id='footer-info'>
+											<li id='footer-info-credits'>This page was last modified 10:43, 10 October 2014 by <a href='wiki/User-Axius.html' title='User:Axius'>Axius</a>.</li>
+											<li id='footer-info-copyright'>Text is available under the <a rel='license' href='http://creativecommons.org/licenses/by-nc/3.0/'>Creative Commons Attribution-NonCommercial 3.0</a> License</li>
+									</ul>
+							<ul id='footer-places'>
+											<li id='footer-places-privacy'><a href='wiki/WikiIslam-Privacy_policy.html' title='WikiIslam:Privacy policy'>Privacy policy</a></li>
+											<li id='footer-places-about'><a href='wiki/WikiIslam.html' title='WikiIslam'>About WikiIslam</a></li>
+											<li id='footer-places-disclaimer'><a href='wiki/WikiIslam-General_disclaimer.html' title='WikiIslam:General disclaimer'>Disclaimers</a></li>
+									</ul>
+										<ul id='footer-icons' class='noprint'>
+											<li id='footer-copyrightico'>
+															<a href='http://creativecommons.org/licenses/by-nc/3.0/'><img src='w/resources/assets/licenses/cc-by-nc-sa.png' alt='Creative Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)' width='88' height='31'></a>
+													</li>
+											<li id='footer-poweredbyico'>
+															<a href='http://www.mediawiki.org/'><img src='w/resources/assets/poweredby_mediawiki_88x31.png' alt='Powered by MediaWiki' width='88' height="31"></a>
+													</li>
+									</ul>
+						<div style='clear:both'></div>
+		</div>
+		
+
+
+
+
+<!-- Google Analytics -->
+
+<!-- Google Analytics [END] -->
+
+	</body>
+</html>
+
+
+
+
+
+
