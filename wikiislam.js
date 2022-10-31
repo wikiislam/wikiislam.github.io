@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     //if (location.href.indexOf('Main_Page.html') != -1) {
         var body = document.getElementById('mw-content-text');
-        body.insertAdjacentHTML('AfterBegin', '<div style="font-weight: bold; background: #EF947C; padding:7px;">This is a 2015 snapshot of WikiIslam.net.<br>You might want to visit the renovated <a href="'+encodeURIComponent(newurl)+'">wikiislam.net</a> instead (not all pages were migrated there, however).</div>');
+        body.insertAdjacentHTML('AfterBegin', '<div style="font-weight: bold; background: #EF947C; padding:7px;">This is a 2015 snapshot of WikiIslam.net.<br>You might want to visit the renovated <a href="'+newurl+'">wikiislam.net</a> instead (not all pages were migrated there, however).</div>');
         
         body.querySelector("a[href*=':Userlogin']").parentNode.parentNode.style.display = 'none';
     //}
