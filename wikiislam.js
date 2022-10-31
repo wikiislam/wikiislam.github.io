@@ -1,4 +1,8 @@
-﻿
+
+// As if October 2022, the original site is back online, so redirect to it.
+var newurl = location.href.replace('wikiislam.github.io', 'wikiislam.net').replace('.html', '').replace('Category-', 'Category:')
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
 
     var newUsers = document.getElementById('n-New-Users');
@@ -8,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (viewSource) viewSource.style.display = 'none';
 
     var mainPage = document.getElementById('n-Main-Page');
-    if (mainPage) mainPage.insertAdjacentHTML('AfterEnd', '<li><a href="https://github.com/wikiislam/wikiislam.github.io">Fork on GitHub</a></li>')
+    if (mainPage) mainPage.insertAdjacentHTML('AfterEnd', '<li><a href="https://wikiislam.net/">Go to official WikiIslam.net</a></li>')
     
-    if (location.href.indexOf('Main_Page.html') != -1) {
+    //if (location.href.indexOf('Main_Page.html') != -1) {
         var body = document.getElementById('mw-content-text');
-        body.insertAdjacentHTML('AfterBegin', '<div style="font-weight: bold; background: #EF947C; padding:7px;">This is a static mirror of the now defunct WikiIslam.net. It is also available as a <a href="https://github.com/wikiislam/wikiislam.github.io">GitHub repository</a>. Images will be uploaded at a later time.</div>');
+        body.insertAdjacentHTML('AfterBegin', '<div style="font-weight: bold; background: #EF947C; padding:7px;">This is a 2015 snapshot of WikiIslam.net.<br>You might want to visit the renovated <a href="'+encodeURIComponent(newurl)+'">wikiislam.net</a> instead (not all pages were migrated there, however).</div>');
         
         body.querySelector("a[href*=':Userlogin']").parentNode.parentNode.style.display = 'none';
-    }
+    //}
 
 
     document.getElementById('searchform').addEventListener('submit', function(e){
